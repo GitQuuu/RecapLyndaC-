@@ -10,6 +10,7 @@ namespace RecapLyndaC_
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Testing if the setup is working");
         }
     }
 }

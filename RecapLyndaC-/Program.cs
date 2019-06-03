@@ -11,24 +11,20 @@ namespace RecapLyndaC_
     
         static void Main(string[] args)
         {
-            
-            ///Multiple Choice question Task
-            ///Create a simple three-question survey
-            ///1. what is your name 2. How old are you 3.What month were you born in
-            ///Output the answers back into the console
 
-            string name;
-            int age;
-            string birthMonth;
+            ///Challenge Survey OOP
+            ///Use a class to store survey data use OOP 
+
+            Data Data = new Data();
         
             Console.WriteLine("What is your name?");
-            name = Console.ReadLine();
+            Data.Name = Console.ReadLine();
             Console.WriteLine("How old are you?");
-            age = int.Parse(Console.ReadLine());
+            Data.Age = int.Parse(Console.ReadLine());
             Console.WriteLine("What month were you born in?");
-            birthMonth = Console.ReadLine();
+            Data.BirthMonth = Console.ReadLine();
             
-            Console.WriteLine($"\nAccording to your indication, Name is:{name} Age is:{age} Birth of month is:{birthMonth}");
+            Console.WriteLine($"\nAccording to your indication, Name is:{Data.Name} Age is:{Data.Age} Birth of month is:{Data.BirthMonth}");
 
 
             Console.ReadLine();

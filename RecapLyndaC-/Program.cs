@@ -18,10 +18,26 @@ namespace RecapLyndaC_
             Data Data = new Data();
 
             Data.Name = Util.Ask("What is your name?");
-            Data.Age = int.Parse(Util.Ask("How old are you?"));
+
+            Console.WriteLine("How old are you");
+            bool forceAgetoInt = true;
+            while (forceAgetoInt)
+            {
+                if (int.TryParse(Console.ReadLine(), out int age))
+                {
+                    Data.Age = age;
+                    forceAgetoInt = false;
+                }
+                else
+                {
+                    Console.WriteLine("value must be a number, try again");
+                }
+                
+            }
+            
             Data.BirthMonth = Util.Ask("What month were you born in?");
     
-            Console.WriteLine($"\nAccording to your indication, Name is:{Data.Name} Age is:{Data.Age} Birth of month is:{Data.BirthMonth}");
+            Console.WriteLine($"\nAccording to your inputs, Name is:{Data.Name} Age is:{Data.Age} Birth of month is:{Data.BirthMonth}");
 
 
             Console.ReadLine();

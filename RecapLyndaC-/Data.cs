@@ -12,9 +12,9 @@ namespace RecapLyndaC_
         private int age;
         private string birthMonth;
 
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public string BirthMonth { get; set; }
+        public string Name { get => name; set => name = value; }
+        public int Age { get => age; set => age = value; }
+        public string BirthMonth { get => birthMonth; set => birthMonth = value; }
 
 
 

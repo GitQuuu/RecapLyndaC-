@@ -16,7 +16,10 @@ namespace RecapLyndaC_
         public int Age { get => age; set => age = value; }
         public string BirthMonth { get => birthMonth; set => birthMonth = value; }
 
-
+        public void Display()
+        {
+            Console.WriteLine($"\nAccording to your inputs, Name is:{Data.Name} Age is:{Data.Age} Birth of month is:{Data.BirthMonth}");
+        }
 
     }
 }

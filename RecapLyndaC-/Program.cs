@@ -20,20 +20,15 @@ namespace RecapLyndaC_
             Data.Name = Util.Ask("What is your name?");
 
             bool forceAgetoInt = true;
-            do
-            {
-               if (int.TryParse(Util.Ask("What is your age?"), out int result))
-                {
-                    result = Data.Age;
+            do{
+               if (int.TryParse(Util.Ask("What is your age?"), out int result)){
+                    Data.Age = result;
                     forceAgetoInt = false;
                 }
-                else
-                {
+                else{
                     Console.WriteLine("Value must be a number, please try again");
-                }
-              
+                }            
             } while (forceAgetoInt);
-
             
             /// Does the same for line 22-35 just a different way to approch the result 
             ///Console.WriteLine("what is your age");
@@ -52,10 +47,9 @@ namespace RecapLyndaC_
             ///
             ///}
 
-
             Data.BirthMonth = Util.Ask("What month were you born in?");
-    
-            Console.WriteLine($"\nAccording to your inputs, Name is:{Data.Name} Age is:{Data.Age} Birth of month is:{Data.BirthMonth}");
+
+            Data.Display();
 
 
             Console.ReadLine();
